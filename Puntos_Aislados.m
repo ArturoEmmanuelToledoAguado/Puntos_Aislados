@@ -2,20 +2,31 @@ clc;
 clear all;
 close all;
 
-%Abrir imagen
-se=imread('IMG/1A.png');
-[f c d]=size(se);
-se=imresize(se,[270 280]);
-se=rgb2gray(se);
-seB=se;
-seW=se;
+%Abrir imagen 1
+seB=imread('IMG/1A.png');
+[f c d]=size(seB);
+seB=imresize(seB,[270 280]);
+seB=rgb2gray(seB);
 for i=1:270
     for j=1:280
-        if se(i,j)~=0
+        if seB(i,j)~=0
             seB(i,j)=1;
-            seW(i,j)=254;
         else
             seB(i,j)=0;
+        end
+    end
+end
+
+%Abrir imagen 2
+seW=imread('IMG//E1.png');
+[f1 c1 d1]=size(seW);
+seW=imresize(seW,[270 280]);
+%seW=rgb2gray(seW);
+for i=1:270
+    for j=1:280
+        if seW(i,j)~=0
+            seW(i,j)=254;
+        else
             seW(i,j)=255;
         end
     end
