@@ -34,6 +34,42 @@ Pero si el centro de la máscara se ha colocado en un punto aislado de una inten
 
 ### Resultados ⚗🧪
 
+Se propuso usar 2 imagenes pixeleadas (Pixelart) para cada fondo, estas imagenes fueron redimensionadas y añadidas a los fondos Blanco (255) y Negro (0), para lograr una mejor visión se recomienda cambiar las líneas 9 y 24 por valores mayores y menores respectivamente  
+
+~~~
+%Abrir imagen 1
+seB=imread('IMG/1A.png');
+[f c d]=size(seB);
+seB=imresize(seB,[270 280]);
+seB=rgb2gray(seB);
+for i=1:270
+    for j=1:280
+        if seB(i,j)~=0
+            seB(i,j)=1;
+        else
+            seB(i,j)=0;
+        end
+    end
+end
+
+%Abrir imagen 2
+seW=imread('IMG//E1.png');
+[f1 c1 d1]=size(seW);
+seW=imresize(seW,[270 280]);
+%seW=rgb2gray(seW);
+for i=1:270
+    for j=1:280
+        if seW(i,j)~=0
+            seW(i,j)=254;
+        else
+            seW(i,j)=255;
+        end
+    end
+end
+~~~
+
+Las siguientes imagenes usan valores de 5 y 250 respectivamente, tambien se muestran lass imagenes añadidas al fondo.
+
 <div align="center"><img src="DocIMG/Resultados.gif"></div>
 
 <a href="https://github.com/ArturoEmmanuelToledoAguado/Puntos_Aislados/blob/main/Puntos_Aislados.m">Código</a>
