@@ -68,7 +68,7 @@ for i=1:270
 end
 ~~~
 
-Las siguientes imagenes usan valores de 5 y 250 respectivamente, tambien se muestran lass imagenes añadidas al fondo.
+Las siguientes imagenes usan valores de 5 y 250 respectivamente, tambien se muestran las imagenes añadidas al fondo.
 
 <div align="center"><img src="DocIMG/Resultados.gif"></div>
 
